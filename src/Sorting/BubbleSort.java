@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class BubbleSort {
 
     public static void main(String[] args) {
-        int[] entry = new int[]{2, 1, 5, 4, 6, 3, 7, 9, 8, 10};
+        int[] entry = new int[]{5,4,3,2,1};
         System.out.println(Arrays.toString(entry));
         System.out.println(Arrays.toString(bubbleSort(entry)));
     }
@@ -13,11 +13,11 @@ public class BubbleSort {
     public static int[] bubbleSort(int[] entry) {
 
         int aux;
-        for (int i = 0; i < entry.length; i++) {
-            for (int j = i + 1; j < entry.length; j++) {
-                if (entry[i] > entry[j]) {
-                    aux = entry[i];
-                    entry[i] = entry[j];
+        for (int i = 0; i < entry.length-1; i++) {
+            for (int j = 0; j < entry.length-i-1; j++) {
+                if (entry[j] > entry[j+1]) {
+                    aux = entry[j+1];
+                    entry[j+1] = entry[j];
                     entry[j] = aux;
                 }
             }

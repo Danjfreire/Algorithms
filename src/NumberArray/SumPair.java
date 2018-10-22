@@ -1,7 +1,5 @@
 package NumberArray;
 
-import org.omg.CORBA.INTERNAL;
-
 import java.util.*;
 
 public class SumPair {
